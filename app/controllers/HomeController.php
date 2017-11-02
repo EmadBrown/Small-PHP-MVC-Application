@@ -8,8 +8,10 @@ class HomeController  extends Controller{
                 echo 'home/index' ;
         }
         
-             public function test() 
+        public function user( $name = ' ') 
         {
-                echo 'Test!' ;
+                $user = Controller::model('User');
+                $user->name = $name;
+                echo $user->name;    
         }
 }
