@@ -1,0 +1,2 @@
+OKAY 
+<?= $data['name'] ;?>

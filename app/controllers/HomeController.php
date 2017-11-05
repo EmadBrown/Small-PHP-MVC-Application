@@ -3,15 +3,11 @@
 
 class HomeController  extends Controller{
    
-        public function index() 
-        {
-                echo 'home/index' ;
-        }
-        
-        public function user( $name = ' ') 
+        public function index($name = ' ') 
         {
                 $user = Controller::model('User');
                 $user->name = $name;
-                echo $user->name;    
+                Controller::view('home/index' , ['name' => $user->name]);
         }
-}
+        
+  }
